@@ -11,76 +11,93 @@ toc:
 ---
 
 ### 更新系统
-````markdown
+
+```markdown
 sudo apt-get update
-````
+```
 
 ### 下载并安装 Clash
+
 1. 新建 Clash 目录并进入目录
-````markdown
+
+```markdown
 mkdir ~/clash
 cd ~/clash
-````
+```
 
 2. 下载clash
-在 [Clash release](https://github.com/doreamon-design/clash/releases) 页面下载相应的版本，对于 Ubuntu 一般使用 clash-linux-amd64 版本：
-````shell
+   在 [Clash release](https://github.com/doreamon-design/clash/releases) 页面下载相应的版本，对于 Ubuntu 一般使用 clash-linux-amd64 版本：
+
+```shell
 wget https://github.com/doreamon-design/clash/releases/download/v2.0.24/clash_2.0.24_linux_amd64.tar.gz
-````
+```
 
 3. 解压
-````shell
+
+```shell
 tar -zxvf clash_2.0.24_linux_amd64.tar.gz
-````
+```
 
 4. 赋予clash可执行权限
-````shell
+
+```shell
 chmod 777 clash
-````
+```
 
 ### 设置配置文件
+
 1. 一般的网络服务提供了 Clash 订阅链接，可以直接下载链接指向的文件内容，保存到 `config.yaml` 中。
-````shell
+
+```shell
 curl -f "订阅链接" >> config.yaml
-````
+```
 
 2. Clash 运行时需要 `Country.mmdb` 文件，当第一次启动 Clash 时（会自动下载至 `~/clash` 文件夹下），也可通过 [链接](https://github.com/Dreamacro/maxmind-geoip/releases) 手动下载
 
 ### 启动
+
 #### 直接启动
-````shell
+
+```shell
 cd ~/clash
 ./clash -d ./
-````
+```
 
 #### 使用screen启动并在后台自动运行
+
 1. 创建一个名为clash的screen
-````shell
+
+```shell
 screen -S clash
-````
+```
 
 2. 启动 Clash 服务
-````shell
+
+```shell
 cd ~/clash
 ./clash -d ./
-````
+```
 
 3. 在 screen 中按下 Ctrl+A+D 退出 screen，Clash 在后台运行
 4. 在 screen 中按下 Ctrl+D 删除screen
 
 ### 测试
+
 1. 设置代理
-````shell
+
+```shell
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-````
+```
 
 2. 测试 google 是否有返回
-````shell
+
+```shell
 curl "www.google.com"
-````
+```
 
 3. 取消代理
-````shell
+
+```shell
 unset http_proxy
 unset https_proxy
-````
+```
