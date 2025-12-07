@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux 纯命令行配置 Clash
-date: 2025-12-06 02:08:00
+date: 2025-12-06 08:00:00
 description: 介绍如何使用纯命令行在 linux 上配置 Clash
 tags: linux
 categories: blogs
