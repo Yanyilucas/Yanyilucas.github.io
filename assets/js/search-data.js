@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-a-post-with-plotly-js",
+        },{id: "post-linux-纯命令行配置-clash",
+        
+          title: "Linux 纯命令行配置 Clash",
+        
+        description: "介绍如何使用纯命令行在 linux 上配置 Clash",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/clash-setup/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
