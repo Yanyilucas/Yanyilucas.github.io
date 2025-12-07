@@ -12,7 +12,7 @@ toc:
 
 ### 更新系统
 
-```markdown
+```shell
 sudo apt-get update
 ```
 
@@ -20,7 +20,7 @@ sudo apt-get update
 
 新建 Clash 目录并进入目录
 
-```markdown
+```shell
 mkdir ~/clash
 cd ~/clash
 ```
@@ -59,6 +59,7 @@ Clash 运行时需要 `Country.mmdb` 文件，当第一次启动 Clash 时（会
 
 ```shell
 cd ~/clash
+
 ./clash -d ./
 ```
 
@@ -74,6 +75,7 @@ screen -S clash
 
 ```shell
 cd ~/clash
+
 ./clash -d ./
 ```
 
@@ -87,7 +89,9 @@ cd ~/clash
 
 ```shell
 export https_proxy=http://127.0.0.1:7890
+
 export http_proxy=http://127.0.0.1:7890
+
 export all_proxy=socks5://127.0.0.1:7890
 ```
 
@@ -101,5 +105,6 @@ curl "www.google.com"
 
 ```shell
 unset http_proxy
+
 unset https_proxy
 ```
